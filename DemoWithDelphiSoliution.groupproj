@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9BAC648D-D940-498B-B535-8DC054029CDE}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DemoWithDelphi.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="tests\DemoWithDelphi_Tests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DemoWithDelphi">
+        <MSBuild Projects="DemoWithDelphi.dproj"/>
+    </Target>
+    <Target Name="DemoWithDelphi:Clean">
+        <MSBuild Projects="DemoWithDelphi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DemoWithDelphi:Make">
+        <MSBuild Projects="DemoWithDelphi.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DemoWithDelphi_Tests">
+        <MSBuild Projects="tests\DemoWithDelphi_Tests.dproj"/>
+    </Target>
+    <Target Name="DemoWithDelphi_Tests:Clean">
+        <MSBuild Projects="tests\DemoWithDelphi_Tests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DemoWithDelphi_Tests:Make">
+        <MSBuild Projects="tests\DemoWithDelphi_Tests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DemoWithDelphi;DemoWithDelphi_Tests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DemoWithDelphi:Clean;DemoWithDelphi_Tests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DemoWithDelphi:Make;DemoWithDelphi_Tests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
