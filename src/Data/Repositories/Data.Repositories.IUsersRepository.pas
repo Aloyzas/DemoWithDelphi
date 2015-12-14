@@ -8,6 +8,7 @@ uses
   ;
 
 type
+  {$M+}
   IUsersRepository = interface (IRepository<TUser, Integer>)
   ['{1ED377EC-1C2F-4F4F-95BE-87E037B7BF7C}']
     function GetByLogin(loginName: string): TUser;

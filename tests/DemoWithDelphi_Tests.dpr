@@ -11,7 +11,7 @@ uses
   DUnitX.Loggers.Console,
   DUnitX.Loggers.Xml.NUnit,
   DUnitX.TestFramework,
-  Unit1 in 'Unit1.pas';
+  Test_Security.Sessions.UserSession in 'Test_Security.Sessions.UserSession.pas';
 
 var
   runner : ITestRunner;
