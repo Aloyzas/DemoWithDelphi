@@ -25,9 +25,6 @@ object frmMainView: TfrmMainView
       item
         Width = 50
       end>
-    ExplicitLeft = 600
-    ExplicitTop = 528
-    ExplicitWidth = 0
   end
   object MainMenu1: TMainMenu
     Left = 232

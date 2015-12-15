@@ -51,7 +51,6 @@ object frmItemsView: TfrmItemsView
     Height = 41
     Align = alTop
     TabOrder = 1
-    ExplicitWidth = 746
   end
   object AureliusDatasetItems: TAureliusDataset
     FieldDefs = <>

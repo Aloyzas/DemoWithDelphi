@@ -27,7 +27,12 @@ uses
   ItemsView in 'src\Forms\ItemsView.pas' {frmItemsView},
   CustomersView in 'src\Forms\CustomersView.pas' {frmCustomersView},
   Data.Repositories.IItemsRepository in 'src\Data\Repositories\Data.Repositories.IItemsRepository.pas',
-  Data.Repositories.ItemsRepository in 'src\Data\Repositories\Data.Repositories.ItemsRepository.pas';
+  Data.Repositories.ItemsRepository in 'src\Data\Repositories\Data.Repositories.ItemsRepository.pas',
+  AOP.Aspects.Attributes in 'src\AOP\Aspects\AOP.Aspects.Attributes.pas',
+  AOP.Aspects.Log in 'src\AOP\Aspects\AOP.Aspects.Log.pas',
+  Logging.Interfaces in 'src\Logging\Logging.Interfaces.pas',
+  Logging.Logger in 'src\Logging\Logging.Logger.pas',
+  Logging.LogWritterFile in 'src\Logging\Logging.LogWritterFile.pas';
 
 {$R *.res}
 

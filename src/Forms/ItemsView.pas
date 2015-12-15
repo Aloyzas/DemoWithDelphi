@@ -37,8 +37,8 @@ var
 implementation
 
 uses
-  Data.Repositories.CustomersRepository,
-  Spring.Services;
+  Spring.Services,
+  DSharp.Aspects.Weaver;
 
 {$R *.dfm}
 
@@ -67,7 +67,10 @@ end;
 
 procedure TfrmItemsView.FormCreate(Sender: TObject);
 begin
-  FRepository := ServiceLocator.GetService<IItemsRepository>;
+  //FRepository := ServiceLocator.GetService<IItemsRepository>;
+
+  //TODO: find a way to assign Proxifier to global ServiceLocator service.
+  FRepository := AspectWeaver.Proxify<IItemsRepository>(ServiceLocator.GetService<IItemsRepository>);
 
   FItems := FRepository.GetAll;
 
