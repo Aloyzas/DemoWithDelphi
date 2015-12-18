@@ -9,6 +9,7 @@ uses
 type
   IRepository<TEntity: class; TKey> = interface (IInvokable)
   ['{5A5BC4A3-BE45-453F-9B90-13FFD7CFCBDB}']
+    [Cursorize]
     function GetAll(): TList<TEntity>;
     function Get(Id: TKey): TEntity;
     [Log]

@@ -32,7 +32,8 @@ uses
   AOP.Aspects.Log in 'src\AOP\Aspects\AOP.Aspects.Log.pas',
   Logging.Interfaces in 'src\Logging\Logging.Interfaces.pas',
   Logging.Logger in 'src\Logging\Logging.Logger.pas',
-  Logging.LogWritterFile in 'src\Logging\Logging.LogWritterFile.pas';
+  Logging.LogWritterFile in 'src\Logging\Logging.LogWritterFile.pas',
+  AOP.Aspects.Cursorize in 'src\AOP\Aspects\AOP.Aspects.Cursorize.pas';
 
 {$R *.res}
 
